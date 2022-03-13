@@ -9,6 +9,7 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
     
+    //TODO: use view model
     var movie:Movie? = nil
     
     
@@ -28,7 +29,7 @@ class MovieDetailViewController: UIViewController {
         self.popularity.text = self.movie?.popularity.description
         self.overview.text = self.movie?.overview.description
         
-        
+        //TODO: load image asynchronously and chache the images
         if let url = movie?.poster,
             let  imageUrl = Util.getImageURL(url),
           let data = try? Data(contentsOf: imageUrl),

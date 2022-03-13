@@ -12,6 +12,7 @@ class MovieListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    //TODO:use the mmodel view here
     var movieList:MovieList? = nil
     
     override func viewDidLoad() {
@@ -19,7 +20,7 @@ class MovieListViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
+        //TODO: prepare movie view model from this movie list 
         movieList = LocalDataLoadingService.loadJson(fileName: "movies", type: MovieList.self)
         //prepare the model view array from moview list
         // Do any additional setup after loading the view.
